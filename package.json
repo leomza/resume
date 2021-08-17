@@ -1,6 +1,24 @@
 {
   "dependencies": {
-    "express": "^4.17.1",
-    "start": "node app.js"
-  }
+    "start": "node server.js",
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "resume",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leomza/resume.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leomza/resume/issues"
+  },
+  "homepage": "https://github.com/leomza/resume#readme",
+  "description": ""
 }

@@ -12,7 +12,7 @@ add your image to the index.html
 
 /////////////////////// THIS IS TO SET UP THE SERVER WITH NODE: /////////////////////////
 
-//(Im pretty sure that it should be a better way to show all the images without doing that many cases)
+/* //(Im pretty sure that it should be a better way to show all the images without doing that many cases)
 const http = require('http');
 const port = process.env.PORT || 3000;
 const fs = require('fs');
@@ -140,14 +140,15 @@ server.on('request', (req, res) => {
 server.listen(port, () => {
   console.log(`The port is serving in port ${port}`)
 })
-
-/////////////////////// THIS IS TO SET UP THE SERVER WITH EXPRESS: /////////////////////////
-/* const express = require('express');
-const app = express();
-
-app.use(express.static(__dirname + '/public'));
-
-const server = app.listen(3000, () => {
-  console.log('Servidor web iniciado en puerto 3000');
-});
  */
+/////////////////////// THIS IS TO SET UP THE SERVER WITH EXPRESS: /////////////////////////
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(express.static('public'));
+
+app.listen(port, () => {
+  console.log(`listening on port ${port}...`)
+});
